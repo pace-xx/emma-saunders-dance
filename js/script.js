@@ -45,4 +45,20 @@ document.addEventListener('DOMContentLoaded', function () {
       status.className = 'form-status visible ok';
     });
   }
+
+  // Click-to-play video facades (avoids autoplaying external video with sound)
+  document.querySelectorAll('.video-facade[data-youtube-id]').forEach(function (facade) {
+    facade.addEventListener('click', function () {
+      var id = facade.getAttribute('data-youtube-id');
+      var iframe = document.createElement('iframe');
+      iframe.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0';
+      iframe.setAttribute('allow', 'autoplay; encrypted-media; picture-in-picture');
+      iframe.setAttribute('allowfullscreen', '');
+      iframe.setAttribute('title', 'YouTube video player');
+      facade.innerHTML = '';
+      facade.style.backgroundImage = 'none';
+      facade.style.cursor = 'default';
+      facade.appendChild(iframe);
+    });
+  });
 });
