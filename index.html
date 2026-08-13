@@ -34,7 +34,15 @@
   </div>
 </header>
 
-<div class="hero-split">
+<div class="hero-split three-col">
+  <div class="media-pane">
+    <video autoplay muted loop playsinline poster="images/hero-poster.jpg">
+      <source src="video/hero.mp4" type="video/mp4">
+    </video>
+    <div class="marquee-overlay">
+      <!-- TODO: full ticker text to be confirmed — see chat -->
+    </div>
+  </div>
   <div class="mosaic">
     <div class="gallery-mosaic">
       <img src="images/gallery-1.jpg" alt="WE ARE HERE Company dancers walking down a suburban street" loading="lazy">
@@ -45,11 +53,8 @@
       <img src="images/gallery-6.jpg" alt="Dancers lying on the ground, overhead view" loading="lazy">
     </div>
   </div>
-  <div class="media-pane video-facade" data-youtube-id="ZLLZ7XrG_PY" style="background-image:url('images/hero-poster.jpg')">
-    <button class="play-btn" type="button" aria-label="Play BYE BYE film clip by Haiku Hands">
-      <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-    </button>
-    <span class="video-label">BYE BYE — Haiku Hands</span>
+  <div class="media-pane">
+    <iframe class="vimeo-bg" src="https://player.vimeo.com/video/712478434?background=1&autoplay=1&loop=1&muted=1" allow="autoplay; fullscreen" title="BYE BYE — Haiku Hands, directed by Jasmin Tarasin, choreography by Emma Saunders"></iframe>
   </div>
 </div>
 
